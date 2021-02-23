@@ -13,7 +13,7 @@ mkdir -p $TEMP_DIR
 IMAGE=ethereumoptimism/go-ethereum-devtools
 
 REPO=contracts-v2
-REPO_URL=https://github.com/ethereum-optimism/$REPO
+REPO_URL=https://github.com/MetisProtocol/$REPO
 CONTRACT_PATH="artifacts"
 
 GIT_HASH=$(git rev-parse)
@@ -23,6 +23,8 @@ HAS_IMAGE=$(docker images "$IMAGE" --format='{{.ID}}')
 # The execution manager fails for some reason, removed all
 # things in the ABI field besides `getMaxTransactionGasLimit`
 TARGETS="OVM_CanonicalTransactionChain
+MVM_Coinbase
+MVM_ProjectMaster
 Lib_AddressManager"
 #OVM_ExecutionManager"
 
