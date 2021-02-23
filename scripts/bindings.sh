@@ -42,7 +42,6 @@ if [ -z "$HAS_IMAGE" ]; then
     docker build \
         -t $IMAGE:latest \
         -f $BASE_DIR/Dockerfile.alltools \
-        --label="io.optimism.repo.git.hash=$GIT_HASH" \
         $BASE_DIR
 fi
 

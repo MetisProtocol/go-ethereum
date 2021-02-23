@@ -201,7 +201,7 @@ func NewEVM(ctx Context, statedb StateDB, chainConfig *params.ChainConfig, vmCon
 		ctx.OvmMockAccount = chainConfig.StateDump.Accounts["mockOVM_ECDSAContractAccount"]
 		ctx.OvmSafetyChecker = chainConfig.StateDump.Accounts["OVM_SafetyChecker"]
 		ctx.MvmCoinbase = chainConfig.StateDump.Accounts["MVM_CoinBase"]
-		ctx.MvmProjctMaster = chainConfig.StateDump.Accounts["MVM_ProjectMaster"]
+		ctx.MvmProjectMaster = chainConfig.StateDump.Accounts["MVM_ProjectMaster"]
 	}
 	evm := &EVM{
 		Context:      ctx,
