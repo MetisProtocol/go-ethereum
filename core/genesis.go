@@ -72,8 +72,6 @@ type Genesis struct {
 	L1CrossDomainMessengerAddress common.Address `json:"-"`
 	AddressManagerOwnerAddress    common.Address `json:"-"`
 	L1ETHGatewayAddress           common.Address `json:"-"`
-	MvmCoinbase                   common.Address `json:"-"`
-	MvmProjectMaster              common.Address `json:"-"`
 }
 
 // GenesisAlloc specifies the initial state that is part of the genesis block.
