@@ -149,6 +149,8 @@ type Context struct {
 	OvmStateManager       dump.OvmDumpAccount
 	OvmMockAccount        dump.OvmDumpAccount
 	OvmSafetyChecker      dump.OvmDumpAccount
+	MvmCoinbase           dump.OvmDumpAccount
+	MvmProjectMaster      dump.OvmDumpAccount
 }
 
 // EVM is the Ethereum Virtual Machine base object and provides
@@ -198,6 +200,8 @@ func NewEVM(ctx Context, statedb StateDB, chainConfig *params.ChainConfig, vmCon
 		ctx.OvmStateManager = chainConfig.StateDump.Accounts["OVM_StateManager"]
 		ctx.OvmMockAccount = chainConfig.StateDump.Accounts["mockOVM_ECDSAContractAccount"]
 		ctx.OvmSafetyChecker = chainConfig.StateDump.Accounts["OVM_SafetyChecker"]
+		ctx.MvmCoinbase = chainConfig.StateDump.Accounts["MVM_CoinBase"]
+		ctx.MvmProjctMaster = chainConfig.StateDump.Accounts["MVM_ProjectMaster"]
 	}
 	evm := &EVM{
 		Context:      ctx,
